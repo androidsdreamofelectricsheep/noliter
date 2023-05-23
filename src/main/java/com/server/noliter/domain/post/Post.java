@@ -2,6 +2,7 @@ package com.server.noliter.domain.post;
 
 import com.server.noliter.domain.BaseTimeEntity;
 import com.server.noliter.domain.user.User;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Post extends BaseTimeEntity {
     @Id
@@ -43,9 +45,10 @@ public class Post extends BaseTimeEntity {
         this.user = user;
     }
 
-    public void updatePost(String title, String content) {
+    public void updatePost(String title, String content, PostCategory category) {
         this.title = title;
         this.content = content;
+        this.category = category;
     }
 
     public void addViewCount() {

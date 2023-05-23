@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PostCategory {
     ETC("기타", "ETC"),
     EDUCATION("교육", "EDUCATION"),
