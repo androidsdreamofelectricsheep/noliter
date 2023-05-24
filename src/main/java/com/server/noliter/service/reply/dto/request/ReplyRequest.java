@@ -10,8 +10,8 @@ public class ReplyRequest {
     private Long postId;
     private String content;
     @Builder
-    public ReplyRequest(Long id, String content){
-        this.postId = id;
+    public ReplyRequest(Long postId, String content){
+        this.postId = postId;
         this.content = content;
     }
 }
