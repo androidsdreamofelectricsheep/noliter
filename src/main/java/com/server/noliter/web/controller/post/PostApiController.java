@@ -1,6 +1,5 @@
 package com.server.noliter.web.controller.post;
 
-import com.server.noliter.domain.post.Post;
 import com.server.noliter.domain.post.PostCategory;
 import com.server.noliter.domain.security.annotation.LoginUser;
 import com.server.noliter.domain.security.dto.SessionUser;
@@ -48,7 +47,7 @@ public class PostApiController {
 
     @PreAuthorize("@webSecurity.checkUserHasPostAuthority(#id, #loginUser)")
     @DeleteMapping("/{id}")
-    public ResponseEntity<Response<PostResponse>> delete(@LoginUser, SessionUser loginUser, @PathVariable Long id, @RequestBody PostRequest request){
+    public ResponseEntity<Response<PostResponse>> delete(@LoginUser SessionUser loginUser, @PathVariable Long id){
         postService.delete(id);
 
         return new ResponseEntity<>(new Response<>(null), HttpStatus.OK);

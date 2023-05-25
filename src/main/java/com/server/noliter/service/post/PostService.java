@@ -2,6 +2,7 @@ package com.server.noliter.service.post;
 
 import com.server.noliter.domain.post.PostCategory;
 import com.server.noliter.domain.post.exception.PostErrorCode;
+import com.server.noliter.domain.user.User;
 import com.server.noliter.domain.user.exception.UserErrorCode;
 import com.server.noliter.global.exception.NoliterException;
 import com.server.noliter.domain.post.Post;
@@ -29,9 +30,11 @@ public class PostService {
 
     @Transactional
     public PostResponse save(Long userId, PostRequest postRequest) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new NoliterException(UserErrorCode.USER_NOT_FOUND));
+
         Post buildPost = Post.builder()
-                .user(userRepository.findById(userId)
-                        .orElseThrow(() -> new NoliterException(UserErrorCode.USER_NOT_FOUND)))
+                .user(user)
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
                 .category(PostCategory.valueOf(postRequest.getCategoryName()))

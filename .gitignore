@@ -1,4 +1,4 @@
-application-oauth.yml
+application-oauth.properties
 
 HELP.md
 .gradle
