@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 @Getter
 public class SessionUser implements Serializable {
-    private Long id;
-    private String username;
-    private String email;
-    private String profileImage;
+    private final Long id;
+    private final String username;
+    private final String email;
+    private final String profileImage;
 
     public SessionUser(User user){
         this.id = user.getId();

@@ -1,12 +1,10 @@
 package com.server.noliter.service.reply;
 
 import com.server.noliter.domain.post.PostRepository;
-import com.server.noliter.domain.post.exception.PostErrorCode;
 import com.server.noliter.domain.reply.Reply;
 import com.server.noliter.domain.reply.ReplyRepository;
 import com.server.noliter.domain.reply.exception.ReplyErrorCode;
 import com.server.noliter.domain.user.UserRepository;
-import com.server.noliter.domain.user.exception.UserErrorCode;
 import com.server.noliter.global.exception.NoliterException;
 import com.server.noliter.service.reply.dto.request.ReplyRequest;
 import com.server.noliter.service.reply.dto.response.ReplyResponse;
@@ -18,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
@@ -31,9 +30,11 @@ public class ReplyService {
     public ReplyResponse save(Long userId, ReplyRequest request){
         Reply replyBuilder = Reply.builder()
                 .user(userRepository.findById(userId)
-                        .orElseThrow(() -> new NoliterException(UserErrorCode.USER_NOT_FOUND)))
+                        // .orElseThrow(() -> new NoliterException(UserErrorCode.USER_NOT_FOUND)))
+                        .orElseThrow(() -> new NoSuchElementException("해당 사용자를 찾을 수 없습니다.")))
                 .post(postRepository.findById(request.getPostId())
-                        .orElseThrow(() -> new NoliterException(PostErrorCode.POST_NOT_FOUND)))
+                        // .orElseThrow(() -> new NoliterException(PostErrorCode.POST_NOT_FOUND)))
+                        .orElseThrow(() -> new NoSuchElementException("해당 게시물을 찾을 수 없습니다.")))
                 .content(request.getContent())
                 .build();
 
@@ -51,7 +52,7 @@ public class ReplyService {
         return new ReplySliceResponse(contents, slice.hasNext());
     }
 
-    public List<ReplyResponse> findTop3ByUserId(Long id){
+    public List<ReplyResponse> getTop3ByUserId(Long id){
         List<Reply> top3Replies = replyRepository.findTop3ByUserIdOrderByCreatedDateDesc(id);
 
         return top3Replies.stream()

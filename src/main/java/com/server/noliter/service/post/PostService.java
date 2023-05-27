@@ -75,6 +75,14 @@ public class PostService {
         postRepository.delete(post);
     }
 
+    public List<PostResponse> getTop3PostsByUserId(Long id){
+        List<Post> top3PostsList = postRepository.findTop3ByUserIdOrderByCreatedDateDesc(id);
+
+        return top3PostsList.stream()
+                .map(PostResponse::new)
+                .collect(Collectors.toList());
+    }
+
     public List<PostResponse> getTop5ByViews(){
         LocalDateTime twoDaysAgo = LocalDateTime.of(LocalDate.now().minusDays(2), LocalTime.of(0, 0, 0));
 

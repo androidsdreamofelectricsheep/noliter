@@ -15,9 +15,9 @@ public class ReplyResponse {
     private Long writerId;
 
     public ReplyResponse(Reply reply){
-        id = reply.getId();
-        content = reply.getContent();
-        writer = reply.getUser().getUsername();
-        writerId = reply.getUser().getId();
+        this.id = reply.getId();
+        this.content = reply.getContent();
+        this.writer = reply.getUser().getUsername();
+        this.writerId = reply.getUser().getId();
     }
 }
