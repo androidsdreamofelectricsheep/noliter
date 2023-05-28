@@ -1,4 +1,4 @@
-package com.server.noliter.web.controller;
+package com.server.noliter.web.controller.user;
 
 import com.google.gson.Gson;
 import com.server.noliter.domain.post.PostCategory;

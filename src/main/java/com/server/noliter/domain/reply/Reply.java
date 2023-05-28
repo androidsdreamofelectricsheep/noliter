@@ -5,9 +5,11 @@ import com.server.noliter.domain.BaseTimeEntity;
 import com.server.noliter.domain.post.Post;
 import com.server.noliter.domain.user.User;
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
+@DynamicInsert
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

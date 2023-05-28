@@ -1,6 +1,6 @@
 package com.server.noliter.web.config;
 
-import com.server.noliter.domain.security.annotation.LoginUserArgumentResolver;
+import com.server.noliter.security.annotation.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

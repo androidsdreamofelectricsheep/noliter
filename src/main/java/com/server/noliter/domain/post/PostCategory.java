@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PostCategory {
     ETC("기타", "ETC"),
@@ -25,4 +24,9 @@ public enum PostCategory {
 
     private final String langKor;
     private final String langEng;
+
+    PostCategory(String langKor, String langEng){
+        this.langKor = langKor;
+        this.langEng = langEng;
+    }
 }

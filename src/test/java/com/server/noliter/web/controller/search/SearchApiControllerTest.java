@@ -1,4 +1,4 @@
-package com.server.noliter.web.controller;
+package com.server.noliter.web.controller.search;
 
 import com.server.noliter.service.post.dto.response.PostResponse;
 import com.server.noliter.service.post.dto.response.PostSliceResponse;

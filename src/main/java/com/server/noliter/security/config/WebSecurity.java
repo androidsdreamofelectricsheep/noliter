@@ -1,6 +1,6 @@
-package com.server.noliter.domain.security.config;
+package com.server.noliter.security.config;
 
-import com.server.noliter.domain.security.dto.SessionUser;
+import com.server.noliter.security.dto.SessionUser;
 import com.server.noliter.service.post.PostService;
 import com.server.noliter.service.reply.ReplyService;
 import lombok.RequiredArgsConstructor;

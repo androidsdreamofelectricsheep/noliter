@@ -62,34 +62,34 @@ public class ControllerAdvice {
     // public ResponseEntity<Response<?>> allOtherException(RuntimeException e) {
     //     ErrorDto error = new ErrorDto("SERVER", e.getMessage());
     //
-    //     return new ResponseEntity<>(new Response<>(null, error), HttpStatus.INTERNAL_SERVER_ERROR);
+    //     return new ResponseEntity<>(new Response<>(null), HttpStatus.INTERNAL_SERVER_ERROR);
     // }
     //
     // @ExceptionHandler(AccessDeniedException.class)
     // public ResponseEntity<Response<?>> accessDeny(AccessDeniedException e) {
     //     ErrorDto error = new ErrorDto("CLIENT", e.getMessage());
     //
-    //     return new ResponseEntity<>(new Response<>(null, error), HttpStatus.UNAUTHORIZED);
+    //     return new ResponseEntity<>(new Response<>(null), HttpStatus.UNAUTHORIZED);
     // }
     //
     // @ExceptionHandler(IllegalArgumentException.class)
     // public ResponseEntity<Response<?>> badRequest(IllegalArgumentException e) {
     //     ErrorDto error = new ErrorDto("CLIENT", e.getMessage());
     //
-    //     return new ResponseEntity<>(new Response<>(null, error), HttpStatus.BAD_REQUEST);
+    //     return new ResponseEntity<>(new Response<>(null), HttpStatus.BAD_REQUEST);
     // }
     //
     // @ExceptionHandler(NoSuchElementException.class)
     // public ResponseEntity<Response<?>> notFound(NoSuchElementException e) {
     //     ErrorDto error = new ErrorDto("CLIENT", e.getMessage());
     //
-    //     return new ResponseEntity<>(new Response<>(null, error), HttpStatus.NOT_FOUND);
+    //     return new ResponseEntity<>(new Response<>(null), HttpStatus.NOT_FOUND);
     // }
     //
     // @ExceptionHandler(IllegalStateException.class)
     // public ResponseEntity<Response<?>> server(IllegalStateException e) {
     //     ErrorDto error = new ErrorDto("SERVER", e.getMessage());
     //
-    //     return new ResponseEntity<>(new Response<>(null, error), HttpStatus.INTERNAL_SERVER_ERROR);
+    //     return new ResponseEntity<>(new Response<>(null), HttpStatus.INTERNAL_SERVER_ERROR);
     // }
 }

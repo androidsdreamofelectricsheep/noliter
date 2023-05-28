@@ -1,6 +1,6 @@
-package com.server.noliter.domain.security.config;
+package com.server.noliter.security.config;
 
-import com.server.noliter.domain.security.service.CustomOAuth2UserService;
+import com.server.noliter.security.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -34,10 +34,10 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests()
                 .antMatchers("/h2-console/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/v1/search/question").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/v1/question/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v1/search/post").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v1/post/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/v1/user/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/v1/answer").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v1/reply").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .logout()

@@ -1,4 +1,4 @@
-package com.server.noliter.domain.security.oauth2.dto;
+package com.server.noliter.security.oauth2.dto;
 
 import com.server.noliter.domain.user.Role;
 import com.server.noliter.domain.user.User;

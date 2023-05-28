@@ -1,6 +1,6 @@
-package com.server.noliter.domain.security.annotation;
+package com.server.noliter.security.annotation;
 
-import com.server.noliter.domain.security.dto.SessionUser;
+import com.server.noliter.security.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
@@ -11,9 +11,11 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 import javax.servlet.http.HttpSession;
 
+
 @RequiredArgsConstructor
 @Component
 public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver {
+
     private final HttpSession httpSession;
 
     @Override

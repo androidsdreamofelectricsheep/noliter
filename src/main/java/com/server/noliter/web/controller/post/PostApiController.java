@@ -1,8 +1,8 @@
 package com.server.noliter.web.controller.post;
 
 import com.server.noliter.domain.post.PostCategory;
-import com.server.noliter.domain.security.annotation.LoginUser;
-import com.server.noliter.domain.security.dto.SessionUser;
+import com.server.noliter.security.annotation.LoginUser;
+import com.server.noliter.security.dto.SessionUser;
 import com.server.noliter.service.post.PostService;
 import com.server.noliter.service.post.dto.request.PostRequest;
 import com.server.noliter.service.post.dto.response.PostResponse;

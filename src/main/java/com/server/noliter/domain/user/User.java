@@ -2,17 +2,21 @@ package com.server.noliter.domain.user;
 
 import com.server.noliter.domain.BaseTimeEntity;
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
-@Table(name = "users")
+@DynamicInsert
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "users")
+@EqualsAndHashCode(callSuper = false)
 @Entity
 public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false)

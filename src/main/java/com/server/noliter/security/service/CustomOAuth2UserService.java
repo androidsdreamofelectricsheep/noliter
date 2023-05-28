@@ -1,7 +1,7 @@
-package com.server.noliter.domain.security.service;
+package com.server.noliter.security.service;
 
-import com.server.noliter.domain.security.dto.SessionUser;
-import com.server.noliter.domain.security.oauth2.dto.OAuthAttributes;
+import com.server.noliter.security.dto.SessionUser;
+import com.server.noliter.security.oauth2.dto.OAuthAttributes;
 import com.server.noliter.domain.user.User;
 import com.server.noliter.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.server.noliter.domain.security.annotation;
+package com.server.noliter.security.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
