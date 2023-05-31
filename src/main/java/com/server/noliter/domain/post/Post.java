@@ -39,6 +39,7 @@ public class Post extends BaseTimeEntity {
 
     @Builder
     public Post(String title, String content, Integer views, PostCategory category, User user) {
+    // public Post(String content, Integer views, PostCategory category, User user) {
         this.title = title;
         this.content = content;
         this.views = views;
@@ -47,6 +48,7 @@ public class Post extends BaseTimeEntity {
     }
 
     public void updatePost(String title, String content, PostCategory category) {
+    // public void updatePost(String content, PostCategory category) {
         this.title = title;
         this.content = content;
         this.category = category;

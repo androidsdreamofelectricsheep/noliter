@@ -61,6 +61,7 @@ public class PostService {
         Post post = postRepository.findById(id)
                 .orElseThrow(() -> new NoliterException(PostErrorCode.POST_NOT_FOUND));
         post.updatePost(postRequest.getTitle(), postRequest.getContent(), PostCategory.valueOf(postRequest.getCategoryName()));
+        // post.updatePost(postRequest.getContent(), PostCategory.valueOf(postRequest.getCategoryName()));
 
         return new PostResponse(post);
     }

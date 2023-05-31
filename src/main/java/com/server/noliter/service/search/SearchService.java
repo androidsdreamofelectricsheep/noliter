@@ -23,10 +23,10 @@ public class SearchService {
     public PostSliceResponse getSearchedPosts(PageRequest pageRequest, String categoryName, String word) {
         Slice<Post> slice;
 
-        if (categoryName.equals("ETC")) {
-            slice = postRepository.findByContentContainingIgnoreCaseOrderByCreatedDateDesc(word, pageRequest);
+        if (categoryName.equals("ALL")) {
+            slice = postRepository.findByTitleContainingIgnoreCaseOrderByCreatedDateDesc(word, pageRequest);
         } else {
-            slice = postRepository.findByCategoryAndContentContainingIgnoreCaseOrderByCreatedDateDesc(PostCategory.valueOf(categoryName), word, pageRequest);
+            slice = postRepository.findByCategoryAndTitleContainingIgnoreCaseOrderByCreatedDateDesc(PostCategory.valueOf(categoryName), word, pageRequest);
         }
 
         List<PostResponse> content = slice.getContent().stream()

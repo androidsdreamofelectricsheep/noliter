@@ -86,6 +86,7 @@ public class PostApiControllerTest {
         String requestBody = gson.toJson(buildPost);
         PostResponse postResponse =
                 new PostResponse(1L, "H/W", "(거래 완료) 리얼포스 키보드", "판매 완료되었습니다.", "판교 개발자", 1L, 1);
+                // new PostResponse(1L, "H/W", "판매 완료되었습니다.", "판교 개발자", 1L, 1);
 
         given(postService.update(eq(1L), any(PostRequest.class)))
                 .willReturn(postResponse);

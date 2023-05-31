@@ -122,6 +122,7 @@ public class UserApiControllerTest {
     void 회원_최근게시글3개_조회() throws Exception {
         // given
         PostResponse postResponse = new PostResponse(1L, "LIVING", "제목", "본문", "작성자", 4L, 100);
+        // PostResponse postResponse = new PostResponse(1L, "LIVING",  "본문", "작성자", 4L, 100);
 
 
         List<PostResponse> recent3Posts = new ArrayList<>();
