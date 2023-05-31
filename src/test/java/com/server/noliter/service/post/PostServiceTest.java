@@ -77,7 +77,7 @@ public class PostServiceTest {
 
         PostResponse postResponse = postService.findById(1L);
 
-        // assertThat(postResponse.getTitle()).isEqualTo(post.getTitle());
+        assertThat(postResponse.getTitle()).isEqualTo(post.getTitle());
         assertThat(postResponse.getContent()).isEqualTo(post.getContent());
         assertThat(postResponse.getWriter()).isEqualTo(post.getUser().getUsername());
         assertThat(postResponse.getCategoryName()).isEqualTo(post.getCategory().getLangKor());
@@ -100,7 +100,7 @@ public class PostServiceTest {
 
         PostResponse postResponse = postService.update(1L, postRequest);
 
-        // assertThat(post.getTitle()).isEqualTo(postResponse.getTitle());
+        assertThat(post.getTitle()).isEqualTo(postResponse.getTitle());
         assertThat(post.getContent()).isEqualTo(postResponse.getContent());
         assertThat(post.getCategory().getLangKor()).isEqualTo(postResponse.getCategoryName());
     }

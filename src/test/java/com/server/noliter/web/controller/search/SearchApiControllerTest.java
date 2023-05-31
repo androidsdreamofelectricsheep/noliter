@@ -35,7 +35,8 @@ public class SearchApiControllerTest {
     void 게시글_검색() throws Exception {
         // given
         PageRequest pageRequest = PageRequest.of(Integer.parseInt("1"), Integer.parseInt("5"));
-        PostResponse postResponse = new PostResponse(1L, "GAME", "Minesweeper", "windows game", "sweeper", 4L, 4);
+        PostResponse postResponse = new PostResponse(1L, "GAME", "Minesweeper", "", "sweeper", 4L, 4);
+        // PostResponse postResponse = new PostResponse(1L, "GAME",  "windows game", "sweeper", 4L, 4);
         List<PostResponse> list = new ArrayList<>();
         list.add(postResponse);
         PostSliceResponse slice = new PostSliceResponse(list, true);

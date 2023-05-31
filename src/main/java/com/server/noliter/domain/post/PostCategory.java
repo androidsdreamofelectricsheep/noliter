@@ -2,15 +2,14 @@ package com.server.noliter.domain.post;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 @Getter
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PostCategory {
-    ETC("기타", "ETC"),
+    ALL("모두", "ALL"),
     EDUCATION("교육", "EDUCATION"),
-    SOFTWARE("소프트웨어", "S/W"),
-    HARDWARE("하드웨어", "H/W"),
+    SOFTWARE("소프트웨어", "SOFTWARE"),
+    HARDWARE("하드웨어", "HARDWARE"),
     GAME("게임", "GAME"),
     ART("예술", "ART"),
     CULTURE("문화", "CULTURE"),

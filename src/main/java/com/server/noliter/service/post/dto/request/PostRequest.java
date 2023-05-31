@@ -14,6 +14,7 @@ public class PostRequest {
 
     @Builder
     public PostRequest(String title, String content, String categoryName){
+    // public PostRequest(String content, String categoryName){
         this.title = title;
         this.content = content;
         this.categoryName = categoryName;
