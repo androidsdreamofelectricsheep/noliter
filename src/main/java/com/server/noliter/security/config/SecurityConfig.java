@@ -19,7 +19,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Value("${const.url.client_server}")
+    // @Value("${const.url.client_server}")
+    @Value("http://localhost:3000")
     private String clientServerUrl;
 
     private final CustomOAuth2UserService customOAuthUserService;
