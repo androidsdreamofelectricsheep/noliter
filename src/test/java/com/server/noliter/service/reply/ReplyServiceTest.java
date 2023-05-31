@@ -81,6 +81,7 @@ public class ReplyServiceTest {
         Reply reply = new Reply(1L, "1빠", new Post(), new User());
         replies.add(reply);
         SliceImpl<Reply> slice = new SliceImpl<>(replies, Pageable.ofSize(3), true);
+        given(replyRepository.findByPostIdOrderByCreatedDateDesc(eq(1L), eq(pageRequest))).willReturn(slice);
 
         // when
         ReplySliceResponse replySliceResponse = replyService.findReplies(pageRequest, 1L);

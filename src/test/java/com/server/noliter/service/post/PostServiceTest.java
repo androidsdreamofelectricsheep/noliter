@@ -93,7 +93,7 @@ public class PostServiceTest {
         PostRequest postRequest = PostRequest.builder()
                 .title("수정된 글 제목")
                 .content("수정된 글")
-                .categoryName("ETC")
+                .categoryName("ALL")
                 .build();
 
         given(postRepository.findById(1L)).willReturn(Optional.of(post));
