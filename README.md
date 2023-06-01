@@ -165,3 +165,7 @@ React + Springboot
 | GET | /api/v1/user/{id}/post/top3  | 사용자 게시글 최신 top3         |                                                                               |  | 200 OK / data: List<게시글>    |
 | GET | /api/v1/user/{no}/reply/top3 | 사용자 댓글 최신 top3          |                                                                               |  | 200 OK / data: List<댓글>     |
 | GET | /api/v1/search/post          | 검색된 게시글 리스트             | parameters: categoryName(String), word(String), page( Integer), size(Integer) |  | 200 OK / data: 게시글 리스트(페이징) |
+
+### TROUBLESHOOTING
+https://alabaster-caravel-721.notion.site/12ce94f0864544269cc64553fb688fbd
+
